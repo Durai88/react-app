@@ -18,15 +18,19 @@ const ele = <h1>Hai to all i am coming {obj.lname}</h1>
 }
 */
 
-class Cartoon extends React.Component{
-	render(){
-		return <h1>Hai to all {this.props.name} {this.props.place} </h1>
-	}
+function Cartoon(props) {
+		return <h1>Hai to all {props.name} {props.place} </h1>
 
 }
 
+function Show(){
+	return <div>
+	<Cartoon name="Durai" place="Beijing" />
+	</div>
+}
+
 ReactDOM.render(
-		<Cartoon name="Durai" place="Beijing" />	, 	document.getElementById('root1')
+		<Show />	, 	document.getElementById('root1')
 
 	);
 
